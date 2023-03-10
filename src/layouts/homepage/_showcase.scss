@@ -1,0 +1,61 @@
+.showcase{
+    height: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 276.5px;
+    text-align: left;
+    background-color:#131313;
+    position: relative;
+    overflow: hidden;
+    &__textblock{
+        width: 734px;
+        margin-top: 156px;
+        margin-left: 124px;
+        &__statrack{
+            display: flex;
+            &__stat{
+                margin-right: 66px;
+                &__number{
+                display: flex;
+                width: 200px;
+                font-family: Rubik;
+                font-weight: 500;
+                font-size: 65px;
+                color: #f1a501;
+                }
+                &__text{
+                    font-family: Poppins;
+                    font-size: 20px;
+                    text-align: left;
+                    color: #fff;
+                }
+                &__button{
+                    width: 48px;
+                    height: 48px;
+                    background: linear-gradient(to right,#161fe4 0%, #bb14e2 100%);
+                    border: none;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &__icon{
+                        height: 20px;
+                        color: white;
+                    }
+                }
+            }
+        }
+        &__loremIpsum{
+            font-size: 18px;
+            text-align: left;
+            color: white;
+            opacity: 0.71;
+            margin-top: 64px;
+        }
+    }
+    &__img{
+        position: absolute;
+        @include levitation;
+    }
+}

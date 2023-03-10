@@ -8,10 +8,10 @@ import logo from "../assets/header_logo.png";
 
 function Header(){
     return(
-        <div className='header'>
+        <header className='header'>
             <img src={logo} alt="logo alternatif de Quality Contracts"></img>
             <Navbar/>
-        </div>
+        </header>
     )
 }
 

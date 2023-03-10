@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -10,6 +14,14 @@ body {
   min-height: 100vh;
 }
 
+button, a {
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.01);
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -17,8 +29,21 @@ body {
 H1 {
   font-size: 70px;
   font-weight: 700;
+  letter-spacing: -2px;
   width: 860px;
   margin: auto;
+}
+
+H2 {
+  font-size: 65px;
+  font-weight: 700;
+  color: white;
+}
+
+H3 {
+  font-weight: 600;
+  font-size: 57px;
+  line-height: 68px;
 }
 
 button {
@@ -64,37 +89,163 @@ button {
   background-color: #323232;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 91.16px;
+  margin-top: 149.5px;
+}
+.footer__navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__navbar__link {
+  font-weight: normal;
+  font-size: 19px;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.82;
+  margin-right: 50px;
+}
+.footer__copyright {
+  font-weight: normal;
+  font-size: 19px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.26);
+}
+.footer__socialbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 261px;
+  height: 55px;
+  border-radius: 26px;
+  border: 1.5px solid rgba(0, 0, 0, 0.27);
+}
+.footer__socialbar__text {
+  margin: 0 30px;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 84px;
+  text-align: left;
+  color: #000;
+  opacity: 0.82;
+}
+.footer__socialbar__social {
+  display: flex;
+  margin-right: 10px;
+}
+
 .homepage {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.homepage__hero {
+
+.showcase {
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 276.5px;
+  text-align: left;
+  background-color: #131313;
+  position: relative;
+  overflow: hidden;
+}
+.showcase__textblock {
+  width: 734px;
+  margin-top: 156px;
+  margin-left: 124px;
+}
+.showcase__textblock__statrack {
+  display: flex;
+}
+.showcase__textblock__statrack__stat {
+  margin-right: 66px;
+}
+.showcase__textblock__statrack__stat__number {
+  display: flex;
+  width: 200px;
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 65px;
+  color: #f1a501;
+}
+.showcase__textblock__statrack__stat__text {
+  font-family: Poppins;
+  font-size: 20px;
+  text-align: left;
+  color: #fff;
+}
+.showcase__textblock__statrack__stat__button {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(to right, #161fe4 0%, #bb14e2 100%);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showcase__textblock__statrack__stat__button__icon {
+  height: 20px;
+  color: white;
+}
+.showcase__textblock__loremIpsum {
+  font-size: 18px;
+  text-align: left;
+  color: white;
+  opacity: 0.71;
+  margin-top: 64px;
+}
+.showcase__img {
+  position: absolute;
+  animation: wave 7s infinite linear;
+}
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero {
   margin-top: 127px;
   position: relative;
 }
-.homepage__hero__textblock {
+.hero__textblock {
   width: 916px;
   height: 670.54px;
   position: relative;
 }
-.homepage__hero__textblock__img {
+.hero__textblock__img {
   position: absolute;
 }
-.homepage__hero__textblock__loremIpsum {
+.hero__textblock__loremIpsum {
   font-size: 23px;
   font-weight: 400;
+  letter-spacing: -1px;
   opacity: 25%;
 }
-.homepage__hero__textblock__form {
+.hero__textblock__form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 96.68px;
   margin-bottom: 40px;
 }
-.homepage__hero__textblock__form__text {
+.hero__textblock__form__text {
   font-size: 25px;
   font-weight: 600;
   padding-left: 95px;
@@ -102,25 +253,25 @@ button {
   width: 500px;
   border-radius: 57px;
   border: double 3px transparent;
-  background-image: linear-gradient(white, white), linear-gradient(#676ce6 0%, #d3a2ef 16.88%, #f3da33 60.26%, #f57059 100%);
+  background-image: linear-gradient(white, white), linear-gradient(to left, #676ce6 0%, #d3a2ef 16.88%, #f3da33 60.26%, #f57059 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-.homepage__hero__textblock__form__submit {
+.hero__textblock__form__submit {
   font-size: 25px;
   font-weight: 600;
   width: 249px;
   border-radius: 57px;
   color: white;
   border: none;
-  background: linear-gradient(#5930ef 0%, #8a6cfa 100%);
+  background: linear-gradient(to left, #5930ef 0%, #8a6cfa 100%);
   box-shadow: 15px 15px 50px rgba(89, 48, 239, 0.05);
 }
-.homepage__hero__textblock__buttonbar {
+.hero__textblock__buttonbar {
   display: flex;
   flex-direction: row;
 }
-.homepage__hero__textblock__buttonbar__button {
+.hero__textblock__buttonbar__button {
   font-size: 17px;
   position: relative;
   width: 198px;
@@ -131,7 +282,7 @@ button {
   background: #fff;
   border: 1px solid #ececec;
 }
-.homepage__hero__textblock__buttonbar__button::before {
+.hero__textblock__buttonbar__button::before {
   content: "";
   width: 12px;
   height: 12px;
@@ -143,7 +294,7 @@ button {
   left: 18px;
   transform: translateY(-50%);
 }
-.homepage__hero__textblock__buttonbar__skipholder {
+.hero__textblock__buttonbar__skipholder {
   width: 79px;
   background-color: white;
   display: flex;
@@ -151,22 +302,21 @@ button {
   position: absolute;
   right: 0px;
 }
-.homepage__hero__textblock__buttonbar__skipholder__skip {
+.hero__textblock__buttonbar__skipholder__skip {
   width: 54px;
   height: 60px;
   background-color: #1E1E1E;
   border: 1px solid #ECECEC;
   border-radius: 11px;
 }
-.homepage__hero__textblock__buttonbar__skipholder__skip__icon {
+.hero__textblock__buttonbar__skipholder__skip__icon {
   color: white;
   height: 13px;
 }
-.homepage__hero__img {
+.hero__img {
   position: absolute;
-  animation: wave 6s infinite linear;
+  animation: wave 7s infinite linear;
 }
-
 @keyframes wave {
   0% {
     transform: translateY(0);
@@ -177,6 +327,42 @@ button {
   100% {
     transform: translateY(0);
   }
+}
+
+.discovery {
+  width: 100%;
+  margin-top: 101.7px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.discovery__textblock {
+  width: 661px;
+  height: 676.84px;
+  text-align: start;
+}
+.discovery__textblock__list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+}
+.discovery__textblock__list__item__text {
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.65);
+  margin: 0 0 0 21.3px;
+}
+.discovery__textblock__button {
+  font-weight: 500;
+  font-size: 23px;
+  width: 295px;
+  height: 80px;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  background: linear-gradient(to left, #161fe4 0%, #bb14e2 100%);
+  box-shadow: 15px 15px 50px rgba(112, 66, 220, 0.12);
 }
 
 /*# sourceMappingURL=main.css.map */
