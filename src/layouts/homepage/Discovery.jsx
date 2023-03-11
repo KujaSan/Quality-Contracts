@@ -1,11 +1,32 @@
+import { useEffect, useState, useRef } from "react";
+
 import capa from "../../assets/Discovery/Capa.png";
 import validate from "../../assets/Discovery/puce.svg";
 
 function Discovery(){
+    const [isVisible, setIsVisible] = useState(false);
+    const targetRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+        setIsVisible(entry.isIntersecting);
+        }, { threshold: 0.5 });
+
+        if (targetRef.current) {
+        observer.observe(targetRef.current);
+        }
+
+        return () => {
+            if (targetRef.current) {
+                observer.unobserve(targetRef.current);
+            }
+        };
+    }, []);
+    
     return(
-        <div className="discovery">
-            <img src={capa} alt="personnage motivé"/>
-            <div className="discovery__textblock">
+        <div className="discovery" ref={targetRef}>
+            <img src={capa} alt="personnage motivé" className={`discovery__img ${isVisible ? 'visible' : ''}`}/>
+            <div className={`discovery__textblock ${isVisible ? 'visible' : ''}`}>
                 <h3>
                     The easiest way to find high quality contract opportunities
                 </h3>
