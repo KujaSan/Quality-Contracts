@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 11 16">
+  <g id="tail-down" transform="translate(0)">
+    <path id="Path" d="M0,15.5A.5.5,0,0,1-.5,15V0A.5.5,0,0,1,0-.5.5.5,0,0,1,.5,0V15A.5.5,0,0,1,0,15.5Z" transform="translate(5.5 0.5)" fill="#111"/>
+    <path id="Shape" d="M5,5.5a.5.5,0,0,1-.354-.146l-5-5a.5.5,0,0,1,0-.707.5.5,0,0,1,.707,0L5,4.293,9.646-.354a.5.5,0,0,1,.707,0,.5.5,0,0,1,0,.707l-5,5A.5.5,0,0,1,5,5.5Z" transform="translate(0.5 10.5)" fill="#111"/>
+  </g>
+</svg>

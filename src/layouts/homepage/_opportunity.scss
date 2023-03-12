@@ -3,16 +3,77 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 137px;
     &__textblock{
         width: 40%;
         margin-bottom: 79px;
+        span{
+            font-size: 25px;
+            color: #000;
+            opacity: 0;
+            &.visible {
+                opacity: 1;
+                transition: opacity 1s ease-out;
+            }
+        }
         h3{
             margin-top: 0;
             margin-bottom: 20px;
+            opacity: 0;
+            &.visible {
+                opacity: 1;
+                transition: opacity 1.5s ease-out;
+            }
         }
         p{
             font-size: 18px;
             color: rgba(0, 0, 0, 0.35);
+            margin-bottom: 0;
+            opacity: 0;
+            &.visible {
+                opacity: 1;
+                transition: opacity 2s ease-out;
+            }
+        }
+    }
+    &__buttonbar{
+        width: 127px;
+        margin-bottom: 51.5px;
+        display: flex;
+        justify-content: space-between;
+        &__button{
+            rotate: 90deg;
+            cursor: pointer;
+        }
+    }
+    &__navigate{
+        width: 680px;
+        height: 49px;
+        margin-bottom: 46.5px;
+        
+        &__list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            margin-top: 0;
+            border-bottom: #D2D2D2 solid 1.5px;
+            &__button{
+                list-style: none;
+                font-family: Poppins;
+                font-weight: 300;
+                font-size: 20px;
+                color: #cdcdcd;
+                padding-bottom: 21px;
+                cursor: pointer;
+            }
+            .active{
+                font-weight: 600;
+                font-size: 20px;
+                color: #000;
+                border-bottom: solid #000 2.5px;
+                margin-bottom: -1.75px;
+            }
         }
     }
 }

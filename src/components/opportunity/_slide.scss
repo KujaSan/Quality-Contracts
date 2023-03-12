@@ -1,0 +1,49 @@
+.slideshow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 890px;
+    &__card{
+        width: 394px;
+        height: 417px;
+        margin: 14px;
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        &__img{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &__text{
+            width: 395px;
+            height: 180px;
+            bottom: 0;
+            position: absolute;
+            text-align: left;
+            border-radius: 0px 0px 24px 24px;
+            background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.53) 100%);
+            p,span{
+                margin-left: 27.5px;
+            }
+            p{
+            font-weight: 500;
+            font-size: 22px;
+            color: #fff;
+            margin-top:84px;
+            margin-bottom: 1.2px;
+            }
+            span{
+                font-weight: 300;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+        
+    }
+    &__card:hover{
+        filter: brightness(110%);
+        transform: scale(1.01);
+    }
+}

@@ -1,0 +1,70 @@
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 418px;
+    background-image: url("../assets/banner/vecteezy_business-people-meeting-conference-discussion-corporate_3500343_533.png");
+    background-position: center;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(136, 70, 151, 0.87) 0%, rgba(130, 100, 34, 0.87) 100%);
+        opacity: 0.87;
+    }
+    &__section{
+        text-align: start;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 88%;
+        height: 238px;
+        p{
+            font-weight: 300;
+            font-size: 20px;
+            color: #fff;
+            opacity: 0.84;
+            margin: 0;
+        }
+        h4{
+            margin: 0 0 14.7px 0;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__scrolling{
+            height: 100%;
+            width: 387px;
+            img{
+                height: 64px;
+                width: 64px;
+            }
+        }
+        &__quality{
+            height: 100%;
+            width: 398px;
+            img{
+                height: 64px;
+                width: 64px;
+            }
+        }
+        &__description{
+            height: 100%;
+            width: 417px;
+            img{
+                height: 54px;
+                width: 54px;
+            }
+        }
+    }
+}

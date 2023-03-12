@@ -46,6 +46,12 @@ H3 {
   line-height: 68px;
 }
 
+h4 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #fff;
+}
+
 button {
   font-family: "Poppins", sans-serif;
 }
@@ -138,6 +144,55 @@ button {
 .footer__socialbar__social {
   display: flex;
   margin-right: 10px;
+}
+
+.slideshow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 890px;
+}
+.slideshow__card {
+  width: 394px;
+  height: 417px;
+  margin: 14px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.slideshow__card__img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slideshow__card__text {
+  width: 395px;
+  height: 180px;
+  bottom: 0;
+  position: absolute;
+  text-align: left;
+  border-radius: 0px 0px 24px 24px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.53) 100%);
+}
+.slideshow__card__text p, .slideshow__card__text span {
+  margin-left: 27.5px;
+}
+.slideshow__card__text p {
+  font-weight: 500;
+  font-size: 22px;
+  color: #fff;
+  margin-top: 84px;
+  margin-bottom: 1.2px;
+}
+.slideshow__card__text span {
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+}
+.slideshow__card:hover {
+  filter: brightness(110%);
+  transform: scale(1.01);
 }
 
 .homepage {
@@ -513,18 +568,149 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 137px;
 }
 .opportunity__textblock {
   width: 40%;
   margin-bottom: 79px;
 }
+.opportunity__textblock span {
+  font-size: 25px;
+  color: #000;
+  opacity: 0;
+}
+.opportunity__textblock span.visible {
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
 .opportunity__textblock h3 {
   margin-top: 0;
   margin-bottom: 20px;
+  opacity: 0;
+}
+.opportunity__textblock h3.visible {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
 }
 .opportunity__textblock p {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.35);
+  margin-bottom: 0;
+  opacity: 0;
+}
+.opportunity__textblock p.visible {
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}
+.opportunity__buttonbar {
+  width: 127px;
+  margin-bottom: 51.5px;
+  display: flex;
+  justify-content: space-between;
+}
+.opportunity__buttonbar__button {
+  rotate: 90deg;
+  cursor: pointer;
+}
+.opportunity__navigate {
+  width: 680px;
+  height: 49px;
+  margin-bottom: 46.5px;
+}
+.opportunity__navigate__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 0;
+  border-bottom: #D2D2D2 solid 1.5px;
+}
+.opportunity__navigate__list__button {
+  list-style: none;
+  font-family: Poppins;
+  font-weight: 300;
+  font-size: 20px;
+  color: #cdcdcd;
+  padding-bottom: 21px;
+  cursor: pointer;
+}
+.opportunity__navigate__list .active {
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  border-bottom: solid #000 2.5px;
+  margin-bottom: -1.75px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 418px;
+  background-image: url("../assets/banner/vecteezy_business-people-meeting-conference-discussion-corporate_3500343_533.png");
+  background-position: center;
+  position: relative;
+}
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(136, 70, 151, 0.87) 0%, rgba(130, 100, 34, 0.87) 100%);
+  opacity: 0.87;
+}
+.banner__section {
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 88%;
+  height: 238px;
+}
+.banner__section p {
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0.84;
+  margin: 0;
+}
+.banner__section h4 {
+  margin: 0 0 14.7px 0;
+}
+.banner__section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner__section__scrolling {
+  height: 100%;
+  width: 387px;
+}
+.banner__section__scrolling img {
+  height: 64px;
+  width: 64px;
+}
+.banner__section__quality {
+  height: 100%;
+  width: 398px;
+}
+.banner__section__quality img {
+  height: 64px;
+  width: 64px;
+}
+.banner__section__description {
+  height: 100%;
+  width: 417px;
+}
+.banner__section__description img {
+  height: 54px;
+  width: 54px;
 }
 
 /*# sourceMappingURL=main.css.map */
