@@ -1,28 +1,32 @@
-import { useEffect, useState, useRef } from "react";
+import useIntersectionObserver from "../../components/useIntersectionObserver";
 
 import capa from "../../assets/Discovery/Capa.png";
 import validate from "../../assets/Discovery/puce.svg";
 
 function Discovery(){
-    const [isVisible, setIsVisible] = useState(false);
-    const targetRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-        setIsVisible(entry.isIntersecting);
-        }, { threshold: 0.5 });
-
-        if (targetRef.current) {
-        observer.observe(targetRef.current);
+    const [isVisible, targetRef] = useIntersectionObserver();
+    const listItems = [
+        {
+            img: validate,
+            text: "Relevant roles delivered directly to your inbox"
+        },
+        {
+            img: validate,
+            text: "Powerful search functionality"
+        },
+        {
+            img: validate,
+            text: "Hundreds of opportunities added daily"
+        },
+        {
+            img: validate,
+            text: "Easily review rate"
+        },
+        {
+            img: validate,
+            text: "IR35 and remote working status"
         }
-
-        return () => {
-            if (targetRef.current) {
-                observer.unobserve(targetRef.current);
-            }
-        };
-    }, []);
-    
+    ];
     return(
         <div className="discovery" ref={targetRef}>
             <img src={capa} alt="personnage motivé" className={`discovery__img ${isVisible ? 'visible' : ''}`}/>
@@ -31,26 +35,15 @@ function Discovery(){
                     The easiest way to find high quality contract opportunities
                 </h3>
                 <div className="discovery__textblock__list">
-                    <div className="discovery__textblock__list__item">
-                        <img src={validate}/>
-                        <p className="discovery__textblock__list__item__text">Relevant roles delivered directly to your inbox</p>
-                    </div>
-                    <div className="discovery__textblock__list__item">
-                        <img src={validate}/>
-                        <p className="discovery__textblock__list__item__text">Powerful search functionality</p>
-                    </div>
-                    <div className="discovery__textblock__list__item">
-                        <img src={validate}/>
-                        <p className="discovery__textblock__list__item__text">Hundreds of opportunities added daily</p>
-                    </div>
-                    <div className="discovery__textblock__list__item">
-                        <img src={validate}/>
-                        <p className="discovery__textblock__list__item__text">Easily review rate</p>
-                    </div>
-                    <div className="discovery__textblock__list__item">
-                        <img src={validate}/>
-                        <p className="discovery__textblock__list__item__text">IR35 and remote working status</p>
-                    </div>
+                    {listItems.map((item, index) => (
+                        <div
+                            key={index}
+                            className={`discovery__textblock__list__item ${isVisible ? 'visible' : ''}`}
+                        >
+                            <img alt='' src={item.img}/>
+                            <p className="discovery__textblock__list__item__text">{item.text}</p>
+                        </div>
+                    ))}
                 </div>
                 <button className="discovery__textblock__button">Discover More!</button>
             </div>

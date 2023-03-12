@@ -43,14 +43,14 @@ function Hero(){
                     </div>
                 </div>
             </div>
-            <img src={cube} alt="Cube en 3d" style={{top: '20%',right: '-35%',animationDelay: '0s'}} className="hero__img" />
-            <img src={analysis} alt="Analysis" style={{top: '20%',left: '-30%',animationDelay: '0.5s'}} className="hero__img" />
-            <img src={bigData} alt="Big data" style={{top: '70%',left: '-35%',animationDelay: '1s'}} className="hero__img"/>
-            <img src={cloud} alt="Le cloud" style={{top: '70%',right: '-30%',animationDelay: '1.5s'}} className="hero__img"/>
-            <img src={social} alt="Reseaux sociaux" style={{top: '-5%',left: '-25%',animationDelay: '3.5s'}} className="hero__img"/>
-            <img src={screw} alt="Tête de vis" style={{top: '-5%',right: '-25%',animationDelay: '2.5s'}} className="hero__img"/>
-            <img src={shield} alt="Un bouclier" style={{top: '45%',left: '-15%',animationDelay: '3s'}} className="hero__img"/>
-            <img src={programming} alt="La programmation" style={{top: '45%',right: '-15%',animationDelay: '2s'}} className="hero__img"/>
+            <img src={cube} alt="" style={{top: '20%',right: '-35%',animationDelay: '0s'}} className="hero__img" />
+            <img src={analysis} alt="" style={{top: '20%',left: '-30%',animationDelay: '0.5s'}} className="hero__img" />
+            <img src={bigData} alt="" style={{top: '70%',left: '-35%',animationDelay: '1s'}} className="hero__img"/>
+            <img src={cloud} alt="" style={{top: '70%',right: '-30%',animationDelay: '1.5s'}} className="hero__img"/>
+            <img src={social} alt="" style={{top: '-5%',left: '-25%',animationDelay: '3.5s'}} className="hero__img"/>
+            <img src={screw} alt="" style={{top: '-5%',right: '-25%',animationDelay: '2.5s'}} className="hero__img"/>
+            <img src={shield} alt="" style={{top: '45%',left: '-15%',animationDelay: '3s'}} className="hero__img"/>
+            <img src={programming} alt="" style={{top: '45%',right: '-15%',animationDelay: '2s'}} className="hero__img"/>
         </div>
     )
 }

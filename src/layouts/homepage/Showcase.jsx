@@ -20,6 +20,7 @@ function Showcase(){
      // Utilisation de useEffect pour observer l'élément <div> avec IntersectionObserver
     useEffect(() => {
         // Création d'un nouvel observateur
+        const refCopy = showcaseRef.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 // La propriété isIntersecting indique si l'élément est en vue ou non
@@ -29,12 +30,15 @@ function Showcase(){
             { threshold: 0.5 }
         );
         // On observe l'élément <div> qui contient le composant Showcase
-        observer.observe(showcaseRef.current);
-        // Retour de la fonction de nettoyage, qui est appelée lorsque le composant est démonté
+        if (refCopy) {
+            observer.observe(refCopy);
+        }
         return () => {
-            observer.unobserve(showcaseRef.current);
+            if (refCopy) {
+                observer.unobserve(refCopy);
+            }
         };
-    }, []);
+    }, [showcaseRef]);
     // Utilisation de useEffect pour lancer les compteurs lorsqu'ils sont en vue
     useEffect(() => {
         let jobsInterval = null;
@@ -101,6 +105,12 @@ function Showcase(){
                 <p className="showcase__textblock__loremIpsum">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporq incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis estoi nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat fer Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eurostal fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in festi culpa qui officia deserunt mollit anim id est laborum
                 </p>
+                <button className='showcase__textblock__buttonJob'>
+                    Post a Job
+                </button>
+                <button className='showcase__textblock__buttonSignUp'>
+                    Free Signup
+                </button>
             </div>
             <img src={creativeminds} alt="logo en forme de C" style={{top: '63px',right: '-9px'}} className='showcase__img' />
             <img src={welove} alt="logo en forme de C" style={{top: '446px',right: '303px'}} className='showcase__img' />

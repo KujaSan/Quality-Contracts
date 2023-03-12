@@ -8,10 +8,15 @@
     background-color:#131313;
     position: relative;
     overflow: hidden;
+    background-image: url(../assets/showcase/circleleft.svg), url(../assets/showcase/circleright.svg);
+    background-position: bottom -329px left -180px,top 200px right 144px ;
+    background-size: auto 806px, auto 944px;
+    background-repeat: no-repeat;
     &__textblock{
         width: 734px;
         margin-top: 156px;
         margin-left: 124px;
+        z-index: 1;
         &__statrack{
             display: flex;
             &__stat{
@@ -52,6 +57,27 @@
             color: white;
             opacity: 0.71;
             margin-top: 64px;
+        }
+        &__buttonJob{
+            width: 228.05px;
+            height: 59px;
+            border-radius: 29.5px;
+            background: transparent;
+            border: 1px solid #d1d1d1;
+            font-weight: 500;
+            font-size: 19px;
+            color: #fff;
+        }
+        &__buttonSignUp{
+            width: 228.05px;
+            height: 59px;
+            border-radius: 29.5px;
+            background: linear-gradient(to left,#161fe4 0%, #bb14e2 100%);
+            border: none;
+            font-weight: 500;
+            font-size: 19px;
+            color: #fff;
+            margin-left: 19px;
         }
     }
     &__img{
