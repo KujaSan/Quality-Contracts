@@ -20,6 +20,7 @@
             justify-content: space-between;
             height: 96.68px;
             margin-bottom: 40px;
+            position: relative;
             &__text{
                 font-size: 25px;
                 font-weight: 600;
@@ -27,10 +28,15 @@
                 opacity: 55%;
                 width: 500px;
                 border-radius: 57px;
-                border: double 3px transparent;
-                background-image: linear-gradient(white, white),linear-gradient(to left,#676ce6 0%, #d3a2ef 16.88%, #f3da33 60.26%, #f57059 100%);
+                border: solid 3px transparent;
+                background-image:linear-gradient(white, white),linear-gradient(to left,#676ce6 0%, #d3a2ef 16.88%, #f3da33 60.26%, #f57059 100%);
                 background-origin: border-box;
                 background-clip: padding-box, border-box;
+            }
+            img{
+                position: absolute;
+                bottom: 37.3px;
+                left: 32.9px;
             }
             &__submit{
                 font-size: 25px;

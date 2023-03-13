@@ -3,9 +3,9 @@ import Card from "./Card";
 function Slide(props){
     return(
         <div className="slideshow">
-            {props.data.card.map((card) => (
+            {props.data.card.map((card, index) => (
                 <Card
-                    key={card.id}
+                    key={index}
                     cover={card.cover}
                     alt={card.alt}
                     title={card.title}

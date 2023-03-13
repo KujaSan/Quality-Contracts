@@ -54,28 +54,28 @@ function Opportunity(){
             title: "Business",
             card:[
                 {
-                    cover: "../img/opportunities/logo-be-creative-inspiration-design-concept.png",
-                    title: "Architecture, Design & UI UX",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Business",
                     offers: "700 Jobs",
                 },
                 {
-                    cover: "../img/opportunities/vecteezy_hand-touching-infographic-cloud-computing-and-technology_8428701_108.png",
-                    title: "Cloud, DevOps & Engineering",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Business",
                     offers: "700 Jobs",
                 },
                 {
-                    cover: "../img/opportunities/vecteezy_businessman-user-typing-login-and-password_2596066.png",
-                    title: "Cybersecurity & Technology",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Business",
                     offers: "700 Jobs",
                 },
                 {
-                    cover: "../img/opportunities/vecteezy_front-view-of-businessman-planning-and-analysis-on-financial-work-accountant-man-check-data-on-graph-document-paper-on-working-table_2437416.png",
-                    title: "Data & Analytics",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Business",
                     offers: "700 Jobs",
                 },
                 {
-                    cover: "../img/opportunities/vecteezy_online-digital-marketing-strategy-and-business-analysis-plan-business-concept-top-view_2411341.png",
-                    title: "Digital Marketing",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Business",
                     offers: "700 Jobs",
                 }
             ]
@@ -83,18 +83,18 @@ function Opportunity(){
             title: "Change",
             card:[
                 {
-                    cover: "../img/opportunities/logo-be-creative-inspiration-design-concept.png",
-                    title: "Architecture, Design & UI UX",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Change",
                     offers: "700 Jobs",
                 },
                 {
-                    cover: "../img/opportunities/vecteezy_hand-touching-infographic-cloud-computing-and-technology_8428701_108.png",
-                    title: "Cloud, DevOps & Engineering",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Change",
                     offers: "700 Jobs",
                 },
                 {
-                    cover: "../img/opportunities/vecteezy_businessman-user-typing-login-and-password_2596066.png",
-                    title: "Cybersecurity & Technology",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Change",
                     offers: "700 Jobs",
                 }
             ]
@@ -102,8 +102,8 @@ function Opportunity(){
             title: "Senior appointments",
             card:[
                 {
-                    cover: "../img/opportunities/logo-be-creative-inspiration-design-concept.png",
-                    title: "Architecture, Design & UI UX",
+                    cover: "../img/opportunities/web-design-banner.jpg",
+                    title: "Placeholder Senior appointment",
                     offers: "700 Jobs",
                 }
             ]

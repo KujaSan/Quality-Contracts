@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
-import logoTextBloc from "../../assets/logo_textblock.png";
-import logoTextBloc2 from "../../assets/logo_textblock2.png";
+import logoTextBloc from "../../assets/hero_logos/logo_textblock.png";
+import logoTextBloc2 from "../../assets/hero_logos/logo_textblock2.png";
 
 import cube from "../../assets/hero_logos/3d-cube.png";
 import analysis from "../../assets/hero_logos/analysis.png";
@@ -12,7 +12,7 @@ import programming from "../../assets/hero_logos/programming.png";
 import screw from "../../assets/hero_logos/screw.png";
 import shield from "../../assets/hero_logos/shield.png";
 import social from "../../assets/hero_logos/social-media.png";
-
+import loupe from "../../assets/hero_logos/loupe.svg";
 function Hero(){
     const title = "The best way to find high quality contract opportunities";
     const upperCaseTitle = title.toUpperCase();
@@ -29,6 +29,7 @@ function Hero(){
                 </p>
                 <form className="hero__textblock__form">
                     <input type="text" placeholder="Search For Job Title" className="hero__textblock__form__text"/>
+                    <img src={loupe} alt=""/>
                     <button className="hero__textblock__form__submit"> Search Now </button>
                 </form>
                 <div className="hero__textblock__buttonbar">

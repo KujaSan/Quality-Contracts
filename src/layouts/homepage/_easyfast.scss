@@ -1,0 +1,94 @@
+.easyfast{
+    width: 100%;
+    height: 927px;
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 148px;
+    &__textblock{
+        margin-left: 141.5px;
+        width: 648px;
+        span{
+            opacity: 0;
+            &.visible {
+                opacity: 1;
+                transition: opacity 1s 0.5s ease-out;
+            }
+        }
+        
+        h3{
+            margin-top: 12px;
+            margin-bottom: 101px;
+            max-width: 513px;
+            opacity: 0;
+            &.visible {
+                opacity: 1;
+                transition: opacity 1s 1s ease-out;
+            }
+        }
+        img{
+            width: 78px;
+            height: 105px;
+        }
+        h4{
+            margin: 0;
+            font-weight: 600;
+            font-size: 28px;
+            color: #5e6282;
+        }
+        p{
+            font-weight: 300;
+            font-size: 23px;
+            color: #5e6282;
+            margin: 10px 0 0 0;
+        }
+        @include standardButton;
+        &__items{
+            &__item{
+                margin-bottom: 66px;
+                display: flex;
+                align-items: center;
+                transform: translateX(-150%);
+                transition: transform 0.5s ease-out;
+                div{
+                    margin-left: 35px;
+                }
+                &.visible{
+                    transform: translateX(0);
+                }
+                &:nth-child(1) {
+                
+                transition-delay: 0.5s;
+                }
+                &:nth-child(2) {
+                    transition-delay: 1s;
+                }
+                &:nth-child(3) {
+                    transition-delay: 1.5s;
+                }
+            }
+            
+            &.visible {
+            transform: translateX(0);
+            }
+        }
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-out;
+        &.visible {
+            transform: translateX(0);
+        }
+    }
+    &__img{
+        position: relative;
+        height: 1048px;
+        width: auto;
+        top: -120px;
+        right: 119px;
+        transform: translateX(150%);
+        transition: transform 0.5s ease-out;
+        &.visible {
+            transform: translateX(0);
+        }
+    }
+}

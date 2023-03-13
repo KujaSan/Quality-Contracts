@@ -3,8 +3,8 @@ import useIntersectionObserver from "../../components/useIntersectionObserver";
 
 import load from "../../assets/Discovery2/next.png";
 import placeholder from "../../assets/Discovery2/strategy-achievement-analysis-pad-device-data.png";
-import horizontaldot from "../../assets/Discovery2/horizontaldot.svg";
-import verticaldot from "../../assets/Discovery2/verticaldot.svg";
+import horizontaldot from "../../assets/horizontaldot.svg";
+import verticaldot from "../../assets/verticaldot.svg";
 function Discovery2(){
     const [isVisible, targetRef] = useIntersectionObserver();
     const [opacity, setOpacity] = useState({span: 0, h3: 0, p: 0});
@@ -23,7 +23,7 @@ function Discovery2(){
     return(
         <div className="discovery2" ref={targetRef}>
             <div className={`discovery2__textblock ${isVisible ? 'visible' : ''}`}>
-                <span style={{opacity: opacity.span, transition: 'opacity 1.5s'}} className="discovery2__textblock__pretitle">
+                <span style={{opacity: opacity.span, transition: 'opacity 1.5s'}}>
                     We Care About You
                 </span>
                 <h3 style={{opacity: opacity.h3, transition: 'opacity 1.5s'}}>
@@ -41,7 +41,7 @@ function Discovery2(){
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in festi
                 culpa qui officia deserunt mollit anim id est laborum
                 </p>
-                <button className="discovery2__textblock__button">Discover More!</button>
+                <button>Discover More!</button>
             </div>
             <div className={`discovery2__placeholder ${isVisible ? 'visible' : ''}`}>
                 <img alt="" className="discovery2__placeholder__verticaldot" src={horizontaldot}/>

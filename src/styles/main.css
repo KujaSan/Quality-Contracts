@@ -14,12 +14,13 @@ body {
   min-height: 100vh;
 }
 
-button, a {
+button, a, input {
   cursor: pointer;
 }
 
 button:hover {
   transform: scale(1.01);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -50,6 +51,19 @@ h4 {
   font-weight: 600;
   font-size: 26px;
   color: #fff;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 58px;
+  color: #000;
+  margin: 0;
+}
+
+span {
+  font-size: 25px;
+  color: #000;
 }
 
 button {
@@ -195,11 +209,34 @@ button {
   transform: scale(1.01);
 }
 
+.slide {
+  width: 659.43px;
+  height: 630.8px;
+  text-align: start;
+}
+.slide__photo {
+  height: 415px;
+  width: 100%;
+  margin-bottom: 54px;
+  overflow: hidden;
+}
+.slide__photo img {
+  width: 100%;
+  height: 100%;
+}
+.slide p {
+  font-weight: 300;
+  font-size: 16px;
+  color: #c9c5bb;
+  margin: 0;
+}
+
 .homepage {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .showcase {
@@ -211,7 +248,6 @@ button {
   text-align: left;
   background-color: #131313;
   position: relative;
-  overflow: hidden;
   background-image: url(../assets/showcase/circleleft.svg), url(../assets/showcase/circleright.svg);
   background-position: bottom -329px left -180px, top 200px right 144px;
   background-size: auto 806px, auto 944px;
@@ -257,6 +293,9 @@ button {
   height: 20px;
   color: white;
 }
+.showcase__textblock__statrack__stat__button:hover {
+  background: linear-gradient(to right, #4048ed 0%, #cc3bee 100%);
+}
 .showcase__textblock__loremIpsum {
   font-size: 18px;
   text-align: left;
@@ -284,6 +323,9 @@ button {
   font-size: 19px;
   color: #fff;
   margin-left: 19px;
+}
+.showcase__textblock__buttonSignUp:hover {
+  background: linear-gradient(to left, #4048ed 0%, #cc3bee 100%);
 }
 .showcase__img {
   position: absolute;
@@ -325,6 +367,7 @@ button {
   justify-content: space-between;
   height: 96.68px;
   margin-bottom: 40px;
+  position: relative;
 }
 .hero__textblock__form__text {
   font-size: 25px;
@@ -333,10 +376,15 @@ button {
   opacity: 55%;
   width: 500px;
   border-radius: 57px;
-  border: double 3px transparent;
+  border: solid 3px transparent;
   background-image: linear-gradient(white, white), linear-gradient(to left, #676ce6 0%, #d3a2ef 16.88%, #f3da33 60.26%, #f57059 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+}
+.hero__textblock__form img {
+  position: absolute;
+  bottom: 37.3px;
+  left: 32.9px;
 }
 .hero__textblock__form__submit {
   font-size: 25px;
@@ -417,7 +465,6 @@ button {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  overflow: hidden;
 }
 .discovery__textblock {
   width: 661px;
@@ -462,7 +509,7 @@ button {
 .discovery__textblock__list__item:nth-child(5) {
   transition-delay: 2.5s;
 }
-.discovery__textblock__button {
+.discovery__textblock button {
   font-weight: 500;
   font-size: 23px;
   width: 295px;
@@ -471,7 +518,9 @@ button {
   color: white;
   border: none;
   background: linear-gradient(to left, #161fe4 0%, #bb14e2 100%);
-  box-shadow: 15px 15px 50px rgba(112, 66, 220, 0.12);
+}
+.discovery__textblock button:hover {
+  background: linear-gradient(to left, #4048ed 0%, #cc3bee 100%);
 }
 .discovery__img {
   height: fit-content;
@@ -499,10 +548,7 @@ button {
   transform: translateX(-100%);
   transition: transform 0.5s ease-out;
 }
-.discovery2__textblock__pretitle {
-  font-size: 25px;
-  line-height: 51px;
-  text-align: left;
+.discovery2__textblock span {
   color: rgba(0, 0, 0, 0.85);
 }
 .discovery2__textblock h3 {
@@ -514,7 +560,7 @@ button {
   color: rgba(0, 0, 0, 0.35);
   margin-bottom: 54px;
 }
-.discovery2__textblock__button {
+.discovery2__textblock button {
   font-weight: 500;
   font-size: 23px;
   width: 295px;
@@ -523,7 +569,9 @@ button {
   color: white;
   border: none;
   background: linear-gradient(to left, #161fe4 0%, #bb14e2 100%);
-  box-shadow: 15px 15px 50px rgba(112, 66, 220, 0.12);
+}
+.discovery2__textblock button:hover {
+  background: linear-gradient(to left, #4048ed 0%, #cc3bee 100%);
 }
 .discovery2__textblock.visible {
   transform: translateX(0);
@@ -575,13 +623,11 @@ button {
   margin-bottom: 79px;
 }
 .opportunity__textblock span {
-  font-size: 25px;
-  color: #000;
   opacity: 0;
 }
 .opportunity__textblock span.visible {
   opacity: 1;
-  transition: opacity 1s ease-out;
+  transition: opacity 1s 0.5s ease-out;
 }
 .opportunity__textblock h3 {
   margin-top: 0;
@@ -590,7 +636,7 @@ button {
 }
 .opportunity__textblock h3.visible {
   opacity: 1;
-  transition: opacity 1.5s ease-out;
+  transition: opacity 1s 1s ease-out;
 }
 .opportunity__textblock p {
   font-size: 18px;
@@ -600,7 +646,7 @@ button {
 }
 .opportunity__textblock p.visible {
   opacity: 1;
-  transition: opacity 2s ease-out;
+  transition: opacity 1s 1.5s ease-out;
 }
 .opportunity__buttonbar {
   width: 127px;
@@ -649,6 +695,7 @@ button {
   align-items: center;
   width: 100%;
   height: 418px;
+  margin-bottom: 105px;
   background-image: url("../assets/banner/vecteezy_business-people-meeting-conference-discussion-corporate_3500343_533.png");
   background-position: center;
   position: relative;
@@ -691,26 +738,254 @@ button {
 .banner__section__scrolling {
   height: 100%;
   width: 387px;
+  transform: translateX(-150%);
+  transition: transform 0.5s ease-out;
 }
 .banner__section__scrolling img {
   height: 64px;
   width: 64px;
 }
+.banner__section__scrolling.visible {
+  transform: translateX(0);
+}
 .banner__section__quality {
   height: 100%;
   width: 398px;
+  opacity: 0;
 }
 .banner__section__quality img {
   height: 64px;
   width: 64px;
 }
+.banner__section__quality.visible {
+  opacity: 1;
+  transition: opacity 1s 0.5s ease-out;
+}
 .banner__section__description {
   height: 100%;
   width: 417px;
+  transform: translateX(150%);
+  transition: transform 0.5s ease-out;
 }
 .banner__section__description img {
   height: 54px;
   width: 54px;
+}
+.banner__section__description.visible {
+  transform: translateX(0);
+}
+
+.easyfast {
+  width: 100%;
+  height: 927px;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 148px;
+}
+.easyfast__textblock {
+  margin-left: 141.5px;
+  width: 648px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
+}
+.easyfast__textblock span {
+  opacity: 0;
+}
+.easyfast__textblock span.visible {
+  opacity: 1;
+  transition: opacity 1s 0.5s ease-out;
+}
+.easyfast__textblock h3 {
+  margin-top: 12px;
+  margin-bottom: 101px;
+  max-width: 513px;
+  opacity: 0;
+}
+.easyfast__textblock h3.visible {
+  opacity: 1;
+  transition: opacity 1s 1s ease-out;
+}
+.easyfast__textblock img {
+  width: 78px;
+  height: 105px;
+}
+.easyfast__textblock h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 28px;
+  color: #5e6282;
+}
+.easyfast__textblock p {
+  font-weight: 300;
+  font-size: 23px;
+  color: #5e6282;
+  margin: 10px 0 0 0;
+}
+.easyfast__textblock button {
+  font-weight: 500;
+  font-size: 23px;
+  width: 295px;
+  height: 80px;
+  border-radius: 40px;
+  color: white;
+  border: none;
+  background: linear-gradient(to left, #161fe4 0%, #bb14e2 100%);
+}
+.easyfast__textblock button:hover {
+  background: linear-gradient(to left, #4048ed 0%, #cc3bee 100%);
+}
+.easyfast__textblock__items__item {
+  margin-bottom: 66px;
+  display: flex;
+  align-items: center;
+  transform: translateX(-150%);
+  transition: transform 0.5s ease-out;
+}
+.easyfast__textblock__items__item div {
+  margin-left: 35px;
+}
+.easyfast__textblock__items__item.visible {
+  transform: translateX(0);
+}
+.easyfast__textblock__items__item:nth-child(1) {
+  transition-delay: 0.5s;
+}
+.easyfast__textblock__items__item:nth-child(2) {
+  transition-delay: 1s;
+}
+.easyfast__textblock__items__item:nth-child(3) {
+  transition-delay: 1.5s;
+}
+.easyfast__textblock__items.visible {
+  transform: translateX(0);
+}
+.easyfast__textblock.visible {
+  transform: translateX(0);
+}
+.easyfast__img {
+  position: relative;
+  height: 1048px;
+  width: auto;
+  top: -120px;
+  right: 119px;
+  transform: translateX(150%);
+  transition: transform 0.5s ease-out;
+}
+.easyfast__img.visible {
+  transform: translateX(0);
+}
+
+.newletter {
+  margin-top: 148.3px;
+  width: 87.71%;
+  height: 676.15px;
+  position: relative;
+}
+.newletter__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 456px;
+  background-color: #FFFDF3;
+  border-radius: 45px;
+}
+.newletter__container__textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+  width: 80%;
+  height: 323px;
+}
+.newletter__container__textbox span {
+  opacity: 0.85;
+}
+.newletter__container__textbox h3 {
+  margin: 0;
+}
+.newletter__container__textbox p {
+  width: 50%;
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  opacity: 0.65;
+}
+.newletter__container__textbox form {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 80px;
+}
+.newletter__container__textbox__textinput {
+  padding-left: 40px;
+  width: 100%;
+  border-radius: 58px;
+  border: none;
+  font-weight: normal;
+  font-size: 23px;
+}
+.newletter__container__textbox__textinput::placeholder {
+  color: #e1e1e1;
+}
+.newletter__container__textbox__submitinput {
+  background-color: #F3DA33;
+  color: white;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 23px;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  width: 243px;
+  border-radius: 58px;
+  border: none;
+}
+.newletter__container__textbox__submitinput:hover {
+  background-color: #f6e363;
+}
+.newletter__topprop {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  z-index: -1;
+  transform: translateX(500%);
+  transition: transform 0.5s ease-out;
+}
+.newletter__topprop.visible {
+  transform: translateX(0);
+}
+.newletter__bottomprop {
+  position: absolute;
+  bottom: 15%;
+  right: 15px;
+  z-index: -1;
+  transform: translateX(-500%);
+  transition: transform 0.5s ease-out;
+}
+.newletter__bottomprop.visible {
+  transform: translateX(0);
+}
+
+.blog {
+  width: 100%;
+  height: 1067px;
+}
+.blog h3 {
+  margin: 0 0 85.5px 0;
+}
+.blog__button {
+  margin-top: 85.2px;
+  font-weight: 500;
+  font-size: 19px;
+  color: #000;
+  width: 260.05px;
+  height: 59px;
+  border-radius: 29.5px;
+  background: transparent;
+  border: 1px solid #e1e1e1;
 }
 
 /*# sourceMappingURL=main.css.map */

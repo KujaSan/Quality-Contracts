@@ -1,6 +1,6 @@
 function Card(props){
     return(
-        <a href=".slideshow__card" className="slideshow__card">
+        <a href=".slideshow__card" className="slideshow__card" key={props.index}>
                 <img className='slideshow__card__img' src={props.cover} alt={props.alt}></img>
                 <div className='slideshow__card__text'>
                 <p>{props.title}</p>

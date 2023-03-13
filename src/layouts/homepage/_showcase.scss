@@ -7,7 +7,6 @@
     text-align: left;
     background-color:#131313;
     position: relative;
-    overflow: hidden;
     background-image: url(../assets/showcase/circleleft.svg), url(../assets/showcase/circleright.svg);
     background-position: bottom -329px left -180px,top 200px right 144px ;
     background-size: auto 806px, auto 944px;
@@ -48,6 +47,9 @@
                         height: 20px;
                         color: white;
                     }
+                    &:hover{
+                        background: linear-gradient(to right, lighten(#161fe4, 10%) 0%, lighten(#bb14e2, 10%) 100%);
+                    }
                 }
             }
         }
@@ -78,6 +80,9 @@
             font-size: 19px;
             color: #fff;
             margin-left: 19px;
+            &:hover{
+                background: linear-gradient(to left, lighten(#161fe4, 10%) 0%, lighten(#bb14e2, 10%) 100%);
+            }
         }
     }
     &__img{
